@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LimeNet — Быстрый и прозрачный VPN на базе Xray-core</title>
+    <title>LimeNet — Быстрый и прозрачный VPN на базе Xray-core | LimeProd</title>
     <!-- Подключение Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Шрифт Inter и JetBrains Mono для технических данных -->
+    <!-- Шрифты Inter и JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -34,12 +34,11 @@
                     animation: {
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'float': 'float 6s ease-in-out infinite',
-                        'spin-slow': 'spin 18s linear infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
+                            '50%': { transform: 'translateY(-8px)' },
                         }
                     }
                 }
@@ -48,14 +47,13 @@
     </script>
 
     <style>
-        /* Базовые стили Liquid Glass и темного фона */
         body {
             background-color: #070907;
             color: #f3f6f3;
             overflow-x: hidden;
         }
 
-        /* Фоновая сетка и световые пятна */
+        /* Фоновая сетка */
         .bg-grid-pattern {
             background-image: 
                 linear-gradient(to right, rgba(183, 255, 3, 0.03) 1px, transparent 1px),
@@ -63,13 +61,13 @@
             background-size: 48px 48px;
         }
 
-        /* Эффект Liquid Glass (жидкое стекло) */
+        /* Эффект Liquid Glass */
         .liquid-glass {
             background: linear-gradient(
                 135deg,
                 rgba(255, 255, 255, 0.055) 0%,
                 rgba(255, 255, 255, 0.015) 50%,
-                rgba(183, 255, 3, 0.025) 100%
+                rgba(183, 255, 3, 0.03) 100%
             );
             backdrop-filter: blur(22px) saturate(160%);
             -webkit-backdrop-filter: blur(22px) saturate(160%);
@@ -80,11 +78,12 @@
                 inset 0 -1px 1px rgba(0, 0, 0, 0.4);
         }
 
+        /* Карточки с зеленовато-стеклянным градиентом в стиле LimeNet */
         .liquid-glass-card {
             background: linear-gradient(
-                145deg,
-                rgba(20, 25, 20, 0.72) 0%,
-                rgba(11, 14, 11, 0.85) 100%
+                155deg,
+                rgba(22, 31, 18, 0.72) 0%,
+                rgba(11, 14, 11, 0.88) 100%
             );
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
@@ -104,7 +103,16 @@
             transform: translateY(-4px);
         }
 
-        /* Неоновое свечение */
+        /* Аутентичный фон экрана клиента LimeNet со скриншота */
+        .app-screen-bg {
+            background: radial-gradient(circle at 50% 42%, rgba(56, 82, 24, 0.55) 0%, rgba(19, 27, 13, 0.94) 58%, rgba(10, 14, 9, 0.98) 100%);
+            box-shadow: 
+                0 28px 65px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(183, 255, 3, 0.12),
+                inset 0 1px 1px rgba(255, 255, 255, 0.18);
+        }
+
+        /* Кнопки с неоновым свечением */
         .lime-glow-btn {
             background: linear-gradient(135deg, #b7ff03 0%, #98db00 100%);
             color: #070907;
@@ -121,12 +129,10 @@
             transform: scale(0.98);
         }
 
-        /* Сектора радиального контроллера в UI превью */
         .dial-sector {
             transition: fill 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
         }
 
-        /* Кастомный скроллбар */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -144,20 +150,19 @@
 </head>
 <body class="bg-obsidian bg-grid-pattern antialiased selection:bg-lime-neon selection:text-obsidian">
 
-    <!-- Фоновые размытые световые сферы (Ambient Glow) -->
+    <!-- Фоновые размытые световые сферы -->
     <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div class="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-lime-neon/10 blur-[140px] animate-pulse-slow"></div>
         <div class="absolute top-1/3 -right-48 w-[480px] h-[480px] rounded-full bg-emerald-500/10 blur-[150px]"></div>
         <div class="absolute -bottom-40 left-1/3 w-[600px] h-[400px] rounded-full bg-lime-neon/5 blur-[160px]"></div>
     </div>
 
-    <!-- 1. Липкая навигационная панель (Sticky Glassmorphic Navbar) -->
+    <!-- 1. Липкая навигационная панель -->
     <header class="sticky top-0 z-50 px-4 sm:px-6 pt-3">
-        <nav class="max-w-6xl mx-auto liquid-glass rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between">
+        <nav class="max-w-6xl mx-auto liquid-glass rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
             <!-- Логотип LimeNet -->
-            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+            <a href="#" class="flex items-center gap-3 group focus:outline-none shrink-0">
                 <div class="relative w-9 h-9 flex items-center justify-center rounded-xl bg-lime-neon/10 border border-lime-neon/30 group-hover:border-lime-neon transition-colors">
-                    <!-- Кастомный геометрический SVG логотип LimeNet -->
                     <svg class="w-5 h-5 text-lime-neon drop-shadow-[0_0_8px_rgba(183,255,3,0.7)]" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16 2L28.1244 9V23L16 30L3.87564 23V9L16 2Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
                         <path d="M16 2V16M16 16L28.1244 9M16 16L3.87564 23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -170,18 +175,24 @@
             </a>
 
             <!-- Навигационные ссылки (Desktop) -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-300">
+            <div class="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-300">
                 <a href="#features" class="hover:text-lime-neon transition-colors">Особенности</a>
                 <a href="#core" class="hover:text-lime-neon transition-colors">Xray-core</a>
                 <a href="#download" class="hover:text-lime-neon transition-colors">Скачать</a>
+                <a href="https://github.com/LimeHi/LimeNet" target="_blank" rel="noopener noreferrer" class="hover:text-lime-neon transition-colors flex items-center gap-1.5">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    <span>GitHub</span>
+                </a>
             </div>
 
-            <!-- Правая часть: статус версии + кнопка Скачать -->
-            <div class="flex items-center gap-3">
-                <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-neutral-400 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg">
-                    <span class="w-1.5 h-1.5 rounded-full bg-lime-neon animate-ping"></span>
-                    v0.1.0
-                </span>
+            <!-- Правая часть: Telegram + Скачать -->
+            <div class="flex items-center gap-2.5">
+                <a href="https://t.me/LimeProdNews" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-neutral-200 hover:text-lime-neon bg-white/5 hover:bg-lime-neon/10 border border-white/10 hover:border-lime-neon/40 px-3.5 py-2 rounded-xl transition-all">
+                    <svg class="w-4 h-4 text-lime-neon shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                    <span class="hidden sm:inline">Telegram</span>
+                </a>
                 <a href="#download" class="lime-glow-btn text-xs sm:text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2">
                     <i data-lucide="download" class="w-4 h-4"></i>
                     <span>Скачать</span>
@@ -191,17 +202,22 @@
     </header>
 
     <main class="relative z-10">
-        <!-- 2. Hero-секция с интерактивным селектором загрузки и живым Liquid Glass UI превью -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-20 lg:pt-20 lg:pb-28">
+        <!-- 2. Hero-секция с динамической загрузкой из downloadlinks.txt и живым превью интерфейса LimeNet -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-20 lg:pt-16 lg:pb-24">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
                 
-                <!-- Левая колонка: Заголовок, описание и интерактивный блок быстрой загрузки -->
+                <!-- Левая колонка: Заголовок, описание и динамический блок быстрой загрузки -->
                 <div class="lg:col-span-7 space-y-6">
-                    <!-- Бейдж версии и ядер -->
-                    <!-- Бейдж версии и ядра -->
-                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-lime-neon/10 border border-lime-neon/30 text-lime-neon text-xs font-mono font-medium shadow-[0_0_20px_rgba(183,255,3,0.12)]">
-                        <span class="w-2 h-2 rounded-full bg-lime-neon"></span>
-                        <span>v0.1.0 • Powered by Xray-core v24+</span>
+                    <!-- Бейдж версии, ядра и канала -->
+                    <div class="flex flex-wrap items-center gap-2.5">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lime-neon/10 border border-lime-neon/30 text-lime-neon text-xs font-mono font-medium shadow-[0_0_20px_rgba(183,255,3,0.12)]">
+                            <span class="w-2 h-2 rounded-full bg-lime-neon animate-pulse"></span>
+                            <span>Pre-Release • Xray-core</span>
+                        </div>
+                        <a href="https://t.me/LimeProdNews" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-lime-neon/10 border border-white/10 hover:border-lime-neon/35 text-neutral-300 hover:text-lime-neon text-xs font-mono transition-colors">
+                            <span>@LimeProdNews</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </a>
                     </div>
 
                     <!-- Главный заголовок -->
@@ -214,11 +230,11 @@
 
                     <!-- Подзаголовок -->
                     <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
-                        Кроссплатформенный клиент нового поколения на базе <span class="text-white font-medium">Xray-core</span> с интерфейсом <span class="text-white font-medium">Liquid Glass</span>. 
-                        Нативная поддержка <span class="text-lime-neon font-mono text-sm">VLESS / XTLS-Reality / Vision</span>, минимальный пинг и ноль лишнего мусора.
+                        Современный клиент от <span class="text-white font-semibold">LimeProd</span> на базе ядра <span class="text-white font-medium">Xray-core</span> с интерфейсом <span class="text-white font-medium">Liquid Glass</span>. 
+                        Поддержка <span class="text-lime-neon font-mono text-sm">VLESS / XTLS-Reality / Vision</span>, режимы <span class="text-white font-mono text-sm">TUN</span> и <span class="text-white font-mono text-sm">SOCKS + HTTP</span>, встроенный <span class="text-white font-medium">URL-тест</span>.
                     </p>
 
-                    <!-- Интерактивный селектор платформы для быстрой загрузки -->
+                    <!-- Интерактивный селектор платформы (ссылки подтягиваются из downloadlinks.txt) -->
                     <div class="liquid-glass rounded-3xl p-5 sm:p-6 max-w-xl space-y-4">
                         <!-- Переключатель вкладок Android / Windows -->
                         <div class="flex items-center justify-between gap-2 p-1 rounded-2xl bg-black/50 border border-white/10">
@@ -228,131 +244,206 @@
                             </button>
                             <button id="tab-windows" onclick="selectHeroPlatform('windows')" class="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-sm font-semibold text-neutral-300 hover:text-white transition-all">
                                 <i data-lucide="monitor" class="w-4 h-4"></i>
-                                <span>Windows (x64)</span>
+                                <span>ПК (Windows)</span>
                             </button>
                         </div>
 
                         <!-- Информация о выбранной сборке + Кнопка скачивания -->
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
-                            <div>
+                            <div class="min-w-0">
                                 <div class="flex items-center gap-2">
-                                    <span id="hero-filename" class="font-mono text-sm font-semibold text-white">LimeNet-0.1.0-android.apk</span>
+                                    <span id="hero-filename" class="font-mono text-sm font-semibold text-white truncate">limenet-prerelease.apk</span>
                                 </div>
                                 <p id="hero-meta" class="text-xs text-neutral-400 mt-1">
-                                    Версия 0.1.0 • 28.4 МБ • Android 8.0+ (arm64-v8a)
+                                    Android 8.0+ • Xray-core • Актуальная сборка из GitHub Releases
                                 </p>
                             </div>
 
-                            <button onclick="triggerHeroDownload()" class="lime-glow-btn px-5 py-3 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 shrink-0">
+                            <a id="hero-download-btn" href="https://github.com/LimeHi/LimeNet/releases/download/limenet/limenet-prerelease.apk" onclick="handleDirectDownload(event, 'android')" class="lime-glow-btn px-5 py-3 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 shrink-0 cursor-pointer">
                                 <i data-lucide="arrow-down-to-line" class="w-4 h-4"></i>
                                 <span id="hero-btn-text">Скачать APK</span>
-                            </button>
+                            </a>
                         </div>
 
-                        <!-- Переключатель SHA-256 контрольной суммы -->
-                        <div class="pt-2 border-t border-white/10">
-                            <button onclick="toggleHeroSha()" class="flex items-center justify-between w-full text-xs text-neutral-400 hover:text-lime-neon transition-colors">
-                                <span class="flex items-center gap-1.5 font-mono">
-                                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-lime-neon"></i>
-                                    Проверить SHA-256 хеш-сумму
-                                </span>
-                                <i id="hero-sha-chevron" data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-200"></i>
-                            </button>
-                            <div id="hero-sha-box" class="hidden mt-2.5 p-2.5 rounded-xl bg-black/60 border border-white/10 flex items-center justify-between gap-2">
-                                <code id="hero-sha-value" class="font-mono text-[11px] text-lime-neon/90 break-all">
-                                    8f94e2c1a7b04d39e61c58f20a4b7d9e3c18f02b6a4d91e7c3b5a8f01d2e4c6a
-                                </code>
-                                <button onclick="copySha('hero')" title="Копировать SHA-256" class="p-1.5 rounded-lg bg-white/5 hover:bg-lime-neon/20 text-neutral-300 hover:text-lime-neon transition-colors shrink-0">
-                                    <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-                                </button>
+                        <!-- Статус синхронизации с downloadlinks.txt и прямая ссылка -->
+                        <div class="pt-2.5 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                            <div class="flex items-center gap-2 text-neutral-400 font-mono">
+                                <span id="links-sync-dot" class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                                <span id="links-sync-status">Синхронизация ссылок с GitHub...</span>
                             </div>
+                            <button onclick="copyCurrentDownloadUrl()" class="inline-flex items-center gap-1.5 text-neutral-400 hover:text-lime-neon font-mono transition-colors self-start sm:self-auto">
+                                <i data-lucide="link" class="w-3.5 h-3.5 text-lime-neon"></i>
+                                <span>Копировать прямую ссылку</span>
+                            </button>
                         </div>
+                    </div>
+
+                    <!-- Быстрые ссылки на соцсети и исходники -->
+                    <div class="flex flex-wrap items-center gap-3 pt-1">
+                        <a href="https://t.me/LimeProdNews" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-lime-neon/15 border border-white/10 hover:border-lime-neon/40 text-xs sm:text-sm font-medium text-neutral-200 hover:text-lime-neon transition-all">
+                            <svg class="w-4 h-4 text-lime-neon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                            <span>Новости и обновления в Telegram</span>
+                        </a>
+                        <a href="https://github.com/LimeHi/LimeNet" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-lime-neon/15 border border-white/10 hover:border-lime-neon/40 text-xs sm:text-sm font-medium text-neutral-200 hover:text-lime-neon transition-all">
+                            <i data-lucide="github" class="w-4 h-4 text-lime-neon"></i>
+                            <span>Репозиторий GitHub</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Правая колонка: Интерактивный Liquid Glass UI Preview Widget -->
+                <!-- Правая колонка: Аутентичный превью-виджет реального интерфейса LimeNet (как на скриншоте) -->
                 <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative w-full max-w-[360px] animate-float">
-                        <!-- Декоративное ореол-свечение за мокапом -->
-                        <div id="widget-ambient-glow" class="absolute -inset-3 rounded-[2.5rem] bg-lime-neon/20 blur-2xl transition-opacity duration-500 opacity-90"></div>
+                    <div class="relative w-full max-w-[355px] animate-float">
+                        <!-- Внешнее мягкое свечение -->
+                        <div id="widget-ambient-glow" class="absolute -inset-3 rounded-[2.6rem] bg-lime-neon/15 blur-2xl transition-opacity duration-500 opacity-75"></div>
 
-                        <!-- Корпус виджета Liquid Glass -->
-                        <div class="relative liquid-glass rounded-[2.25rem] p-6 border border-white/15 overflow-hidden">
+                        <!-- Корпус мобильного экрана LimeNet -->
+                        <div class="relative app-screen-bg rounded-[2.4rem] p-5 border border-white/15 overflow-hidden">
                             <!-- Верхний блик стекла -->
-                            <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                            <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/35 to-transparent"></div>
 
-                            <!-- Шапка окна клиента -->
-                            <div class="flex items-center justify-between mb-6">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-lime-neon shadow-[0_0_8px_#b7ff03]"></span>
-                                    <span class="font-bold text-sm tracking-wide text-white">LimeNet</span>
-                                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-neutral-300">TUN</span>
+                            <!-- Верхняя панель навигации клиента: LimeNet • [подключение] [подписки] [настройки] -->
+                            <div class="flex items-center justify-between gap-1.5 mb-4">
+                                <div class="flex items-center gap-1.5 shrink-0">
+                                    <span class="font-bold text-sm tracking-tight text-white">LimeNet</span>
+                                    <span id="header-status-dot" class="w-2 h-2 rounded-full bg-neutral-400 transition-colors"></span>
                                 </div>
-                                <div class="flex items-center gap-1.5 text-[11px] font-mono text-neutral-400 bg-black/40 px-2.5 py-1 rounded-full border border-white/10">
-                                    <span id="widget-core-badge" class="text-lime-neon">Xray-core</span>
-                                    <span>v24.11</span>
-                                </div>
-                            </div>
 
-                            <!-- Селектор сервера (Dropdown) -->
-                            <div class="relative mb-6">
-                                <label class="block text-[11px] uppercase tracking-wider text-neutral-400 mb-1.5 font-medium">Локация узла</label>
-                                <div class="relative">
-                                    <select id="server-select" onchange="changeWidgetServer()" class="w-full appearance-none bg-black/50 hover:bg-black/70 border border-white/15 focus:border-lime-neon rounded-2xl px-4 py-3 text-sm font-medium text-white outline-none transition-colors cursor-pointer">
-                                        <option value="nl" data-ping="24" data-down="842.5" data-up="410.2" data-ip="185.220.101.42">🇳🇱 Нидерланды • Амстердам #1</option>
-                                        <option value="de" data-ping="29" data-down="790.8" data-up="385.0" data-ip="91.107.214.19">🇩🇪 Германия • Франкфурт #3</option>
-                                        <option value="fi" data-ping="18" data-down="915.4" data-up="490.6" data-ip="65.108.92.114">🇫🇮 Финляндия • Хельсинки #2</option>
-                                    </select>
-                                    <i data-lucide="chevrons-up-down" class="w-4 h-4 text-neutral-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                                <div class="flex items-center gap-1">
+                                    <button onclick="switchAppTab('connect')" id="app-tab-connect" class="px-2.5 py-1.5 rounded-xl text-[10px] leading-tight font-bold bg-lime-neon text-obsidian transition-all text-left">
+                                        подключ<br>ение
+                                    </button>
+                                    <button onclick="switchAppTab('subs')" id="app-tab-subs" class="px-2.5 py-1.5 rounded-xl text-[10px] leading-tight font-medium bg-white/5 border border-white/10 text-neutral-300 hover:text-white transition-all text-left">
+                                        подписк<br>и
+                                    </button>
+                                    <button onclick="switchAppTab('settings')" id="app-tab-settings" class="px-2.5 py-1.5 rounded-xl text-[10px] leading-tight font-medium bg-white/5 border border-white/10 text-neutral-300 hover:text-white transition-all text-left">
+                                        настрой<br>ки
+                                    </button>
                                 </div>
                             </div>
 
-                            <!-- Фирменный 12-секторный радиальный контроллер подключения -->
-                            <div class="relative flex flex-col items-center justify-center my-4">
-                                <div class="relative w-52 h-52 flex items-center justify-center">
-                                    <!-- SVG с 12 секторами -->
-                                    <svg id="radial-dial-svg" class="w-full h-full -rotate-90" viewBox="0 0 200 200">
-                                        <!-- Сектора генерируются скриптом для идеальной геометрии -->
-                                    </svg>
-
-                                    <!-- Центральная интерактивная кнопка питания -->
-                                    <button id="power-toggle-btn" onclick="toggleVpnConnection()" aria-label="Переключить VPN" class="absolute w-28 h-28 rounded-full bg-gradient-to-b from-[#1a211a] to-[#0b0e0b] border border-lime-neon/50 shadow-[0_0_30px_rgba(183,255,3,0.35),inset_0_2px_4px_rgba(255,255,255,0.15)] flex flex-col items-center justify-center gap-1 transition-all duration-300 hover:scale-105 active:scale-95 group cursor-pointer">
-                                        <i id="power-icon" data-lucide="power" class="w-8 h-8 text-lime-neon drop-shadow-[0_0_10px_rgba(183,255,3,0.8)] transition-colors"></i>
-                                        <span id="power-btn-label" class="text-[10px] font-mono uppercase tracking-widest text-lime-neon font-semibold">Активен</span>
+                            <!-- Вкладка 1: Подключение (основной экран со скриншота) -->
+                            <div id="app-view-connect" class="space-y-4">
+                                <!-- Пилюля выбора страны -->
+                                <div class="flex justify-center">
+                                    <button onclick="cycleServerNode()" class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/[0.06] hover:bg-white/[0.11] border border-lime-neon/25 text-white font-semibold text-base transition-all shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
+                                        <span id="selected-server-flag" class="text-lg leading-none">🇱🇻</span>
+                                        <span id="selected-server-name">Латвия</span>
+                                        <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-neutral-400"></i>
                                     </button>
                                 </div>
 
-                                <!-- Статус подключения -->
-                                <div class="mt-2 text-center">
-                                    <div id="connection-status-text" class="text-sm font-semibold text-lime-neon flex items-center justify-center gap-1.5">
-                                        <span class="w-2 h-2 rounded-full bg-lime-neon animate-pulse"></span>
-                                        <span>Защищено • VLESS Reality</span>
+                                <!-- Орбитальный контроллер с флагами, 12 секторами и кнопкой кибер-лайма -->
+                                <div class="relative flex items-center justify-center my-2 py-2">
+                                    <div class="relative w-64 h-64 flex items-center justify-center">
+                                        <!-- Внешнее тонкое орбитальное кольцо -->
+                                        <div class="absolute inset-2 rounded-full border border-lime-neon/35"></div>
+
+                                        <!-- Узлы стран на орбите (Латвия сверху, Чехия, Франция, Нидерланды справа) -->
+                                        <button onclick="selectServerNode(0)" title="Латвия" id="orbit-node-0" class="absolute -top-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-0.5 group cursor-pointer z-20">
+                                            <span class="text-base drop-shadow">🇱🇻</span>
+                                            <span class="w-3.5 h-3.5 rounded-full bg-lime-neon border-2 border-obsidian shadow-[0_0_10px_#b7ff03] transition-transform group-hover:scale-125"></span>
+                                        </button>
+
+                                        <button onclick="selectServerNode(1)" title="Чехия" id="orbit-node-1" class="absolute top-6 right-5 flex flex-col items-center gap-0.5 group cursor-pointer z-20">
+                                            <span class="text-base opacity-85 group-hover:opacity-100 transition-opacity">🇨🇿</span>
+                                            <span class="w-2.5 h-2.5 rounded-full bg-white/30 border border-obsidian transition-all group-hover:scale-125"></span>
+                                        </button>
+
+                                        <button onclick="selectServerNode(2)" title="Франция" id="orbit-node-2" class="absolute top-1/2 -translate-y-4 -right-1 flex flex-col items-center gap-0.5 group cursor-pointer z-20">
+                                            <span class="text-base opacity-85 group-hover:opacity-100 transition-opacity">🇫🇷</span>
+                                            <span class="w-2.5 h-2.5 rounded-full bg-white/30 border border-obsidian transition-all group-hover:scale-125"></span>
+                                        </button>
+
+                                        <button onclick="selectServerNode(3)" title="Нидерланды" id="orbit-node-3" class="absolute bottom-11 right-2 flex flex-col items-center gap-0.5 group cursor-pointer z-20">
+                                            <span class="text-base opacity-85 group-hover:opacity-100 transition-opacity">🇳🇱</span>
+                                            <span class="w-2.5 h-2.5 rounded-full bg-white/30 border border-obsidian transition-all group-hover:scale-125"></span>
+                                        </button>
+
+                                        <!-- SVG с 12 радиальными секторами -->
+                                        <svg id="radial-dial-svg" class="w-48 h-48 -rotate-[105deg]" viewBox="0 0 200 200"></svg>
+
+                                        <!-- Центральная стеклянная кнопка с иконкой половины лайма / микросхемы -->
+                                        <button id="power-toggle-btn" onclick="toggleVpnConnection()" aria-label="Подключить или отключить VPN" class="absolute w-28 h-28 rounded-full bg-gradient-to-b from-[#252c23] to-[#131712] border border-white/20 shadow-[0_12px_30px_rgba(0,0,0,0.75),inset_0_2px_3px_rgba(255,255,255,0.22)] flex flex-col items-center justify-center gap-1 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer z-10">
+                                            <!-- Фирменная SVG-иконка: левая половина — долька лайма, правая — плата Xray -->
+                                            <svg class="w-10 h-10 text-lime-neon drop-shadow-[0_0_10px_rgba(183,255,3,0.65)]" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <!-- Левая половина: лайм -->
+                                                <path d="M23 6C13.0589 6 5 14.0589 5 24C5 33.9411 13.0589 42 23 42V6Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+                                                <path d="M20 10.5C13.2 11.8 8.5 17.3 8.5 24C8.5 30.7 13.2 36.2 20 37.5V10.5Z" stroke="currentColor" stroke-width="1.6"/>
+                                                <path d="M20 24L10.5 17.5M20 24H9M20 24L10.5 30.5M20 24L14.5 12.5M20 24L14.5 35.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                                <!-- Правая половина: микросхема / нейросеть -->
+                                                <path d="M26 11H31L34 8M26 17H35L38 14M26 24H39M26 31H35L38 34M26 37H31L34 40" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <circle cx="35" cy="7.5" r="2" fill="currentColor"/>
+                                                <circle cx="39" cy="13.5" r="2" fill="currentColor"/>
+                                                <circle cx="40.5" cy="24" r="2.2" fill="currentColor"/>
+                                                <circle cx="39" cy="34.5" r="2" fill="currentColor"/>
+                                                <circle cx="35" cy="40.5" r="2" fill="currentColor"/>
+                                            </svg>
+
+                                            <span id="power-status-label" class="text-[11px] font-medium text-neutral-400 leading-none mt-0.5">отключено</span>
+                                            <span id="power-ping-label" class="text-xs font-mono font-semibold text-white leading-none">186 мс</span>
+                                        </button>
                                     </div>
-                                    <div id="connection-ip-text" class="text-[11px] font-mono text-neutral-400 mt-0.5">
-                                        IP: 185.220.101.42 • <span id="session-timer">00:14:28</span>
+                                </div>
+
+                                <!-- Нижние переключатели режима работы: [tun] [socks + http] и [URL-тест] -->
+                                <div class="space-y-2.5 pt-1">
+                                    <div class="flex items-center justify-center gap-2.5">
+                                        <button id="mode-tun-btn" onclick="setProxyMode('tun')" class="px-5 py-2.5 rounded-2xl text-xs font-bold bg-lime-neon text-obsidian shadow-[0_0_18px_rgba(183,255,3,0.35)] transition-all cursor-pointer">
+                                            tun
+                                        </button>
+                                        <button id="mode-socks-btn" onclick="setProxyMode('socks')" class="px-5 py-2.5 rounded-2xl text-xs font-medium bg-white/[0.06] hover:bg-white/[0.1] border border-white/12 text-neutral-200 transition-all cursor-pointer">
+                                            socks + http
+                                        </button>
+                                    </div>
+                                    <div class="flex justify-center">
+                                        <button id="url-test-btn" onclick="runUrlTest()" class="px-6 py-2.5 rounded-2xl text-xs font-medium bg-white/[0.06] hover:bg-white/[0.12] border border-white/12 hover:border-lime-neon/40 text-neutral-200 hover:text-lime-neon transition-all cursor-pointer flex items-center gap-1.5">
+                                            <span>URL-тест</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Живые счетчики пинга и скорости -->
-                            <div class="grid grid-cols-3 gap-2 mt-5 pt-4 border-t border-white/10">
-                                <div class="bg-black/40 rounded-xl p-2.5 text-center border border-white/5">
-                                    <div class="text-[10px] text-neutral-400 uppercase">Пинг</div>
-                                    <div id="stat-ping" class="font-mono text-sm font-bold text-lime-neon mt-0.5">24 ms</div>
+                            <!-- Вкладка 2: Подписки (мини-превью) -->
+                            <div id="app-view-subs" class="hidden space-y-3 py-4">
+                                <div class="text-xs font-mono text-lime-neon uppercase tracking-wider">Активная подписка Xray</div>
+                                <div class="p-3.5 rounded-2xl bg-black/45 border border-white/10 space-y-2">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm font-semibold text-white">LimeNet Reality Cluster</span>
+                                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-lime-neon/15 text-lime-neon">4 узла</span>
+                                    </div>
+                                    <p class="text-[11px] font-mono text-neutral-400 truncate">vless://9a4f8c2e...@lv1.limenet.node:443?security=reality</p>
+                                    <div class="text-[11px] text-neutral-400">Обновлено: только что • Авто-обновление</div>
                                 </div>
-                                <div class="bg-black/40 rounded-xl p-2.5 text-center border border-white/5">
-                                    <div class="text-[10px] text-neutral-400 uppercase">Загрузка</div>
-                                    <div id="stat-down" class="font-mono text-sm font-bold text-white mt-0.5">842 <span class="text-[10px] font-normal text-neutral-400">Мбит</span></div>
-                                </div>
-                                <div class="bg-black/40 rounded-xl p-2.5 text-center border border-white/5">
-                                    <div class="text-[10px] text-neutral-400 uppercase">Отдача</div>
-                                    <div id="stat-up" class="font-mono text-sm font-bold text-white mt-0.5">410 <span class="text-[10px] font-normal text-neutral-400">Мбит</span></div>
-                                </div>
+                                <button onclick="switchAppTab('connect')" class="w-full py-2.5 rounded-xl bg-lime-neon text-obsidian font-bold text-xs">
+                                    Вернуться к подключению
+                                </button>
                             </div>
 
-                            <!-- Подсказка об интерактивности -->
-                            <p class="text-center text-[11px] text-neutral-500 mt-3">
-                                Нажмите на кнопку питания, чтобы протестировать UI
+                            <!-- Вкладка 3: Настройки (мини-превью) -->
+                            <div id="app-view-settings" class="hidden space-y-2.5 py-4 text-xs">
+                                <div class="text-xs font-mono text-lime-neon uppercase tracking-wider mb-1">Параметры Xray-core</div>
+                                <div class="p-3 rounded-xl bg-black/45 border border-white/10 flex items-center justify-between">
+                                    <span class="text-neutral-200">Ядро маршрутизации</span>
+                                    <span class="font-mono text-lime-neon">Xray-core v24+</span>
+                                </div>
+                                <div class="p-3 rounded-xl bg-black/45 border border-white/10 flex items-center justify-between">
+                                    <span class="text-neutral-200">Обход локальных сетей (LAN)</span>
+                                    <span class="font-mono text-lime-neon">Вкл</span>
+                                </div>
+                                <div class="p-3 rounded-xl bg-black/45 border border-white/10 flex items-center justify-between">
+                                    <span class="text-neutral-200">FakeDNS / Защита от утечек</span>
+                                    <span class="font-mono text-lime-neon">Активно</span>
+                                </div>
+                                <button onclick="switchAppTab('connect')" class="w-full mt-2 py-2.5 rounded-xl bg-lime-neon text-obsidian font-bold text-xs">
+                                    Готово
+                                </button>
+                            </div>
+
+                            <p class="text-center text-[10px] text-neutral-500 mt-4">
+                                Интерактивное превью • Нажмите на лайм для старта
                             </p>
                         </div>
                     </div>
@@ -360,7 +451,7 @@
             </div>
         </section>
 
-        <!-- 3. Секция особенностей (Features Grid — 4 Liquid Glass карточки) -->
+        <!-- 3. Секция особенностей (Features Grid) -->
         <section id="features" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
             <div class="text-center max-w-2xl mx-auto mb-14">
                 <span class="text-xs font-mono uppercase tracking-widest text-lime-neon">Архитектура и дизайн</span>
@@ -368,12 +459,12 @@
                     Создан для скорости и контроля
                 </h2>
                 <p class="text-neutral-400 text-sm sm:text-base mt-3">
-                    Никакой перегруженности — только современные протоколы шифрования и продуманный визуальный отклик.
+                    Никакой перегруженности — только актуальный стек Xray-core и продуманный визуальный отклик.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Карточка 1: Liquid Glass UI -->
+                <!-- Карточка 1 -->
                 <div class="liquid-glass-card rounded-3xl p-7 flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-lime-neon/10 border border-lime-neon/30 flex items-center justify-center text-lime-neon mb-5 shadow-[0_0_20px_rgba(183,255,3,0.15)]">
@@ -381,88 +472,89 @@
                         </div>
                         <h3 class="text-xl font-bold text-white mb-2.5">Liquid Glass UI</h3>
                         <p class="text-neutral-300 text-sm leading-relaxed">
-                            Полупрозрачный адаптивный интерфейс с многослойным размытием, живыми световыми бликами и фирменным 12-секторным радиальным контроллером состояния.
+                            Полупрозрачный адаптивный интерфейс с орбитальным селектором стран, 12-секторным радиальным индикатором пинга и плавными анимациями без лишней нагрузки на батарею.
                         </p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-lime-neon/80">
                         <span>60/120 FPS Анимации</span>
                         <span>•</span>
-                        <span>Низкое потребление ОЗУ</span>
+                        <span>Мгновенный URL-тест узлов</span>
                     </div>
                 </div>
 
-                <!-- Карточка 2: Нативная мощь Xray-core v24+ -->
+                <!-- Карточка 2 -->
                 <div id="core" class="liquid-glass-card rounded-3xl p-7 flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-lime-neon/10 border border-lime-neon/30 flex items-center justify-center text-lime-neon mb-5 shadow-[0_0_20px_rgba(183,255,3,0.15)]">
                             <i data-lucide="cpu" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2.5">Нативная мощь Xray-core v24+</h3>
+                        <h3 class="text-xl font-bold text-white mb-2.5">Нативная мощь Xray-core</h3>
                         <p class="text-neutral-300 text-sm leading-relaxed">
-                            Чистая интеграция актуального ядра Xray-core без тяжелых прослоек. Мгновенное рукопожатие VLESS + XTLS-Reality (Vision), транспорты gRPC, WebSocket и SplitHTTP с защитой от утечек DNS.
+                            Чистая интеграция Xray-core без тяжелых прослоек. Мгновенное рукопожатие VLESS + XTLS-Reality (Vision), транспорты gRPC, WebSocket и SplitHTTP с защитой от утечек DNS.
                         </p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-white/5 flex flex-wrap gap-2">
                         <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-white/5 border border-white/10 text-neutral-200">VLESS Reality</span>
                         <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-white/5 border border-white/10 text-neutral-200">XTLS-Vision</span>
                         <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-white/5 border border-white/10 text-neutral-200">gRPC / WS</span>
-                        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-lime-neon/10 border border-lime-neon/30 text-lime-neon">TUN Mode</span>
+                        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-lime-neon/10 border border-lime-neon/30 text-lime-neon">Xray-core</span>
                     </div>
                 </div>
 
-                <!-- Карточка 3: Кроссплатформенность -->
+                <!-- Карточка 3 -->
                 <div class="liquid-glass-card rounded-3xl p-7 flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-lime-neon/10 border border-lime-neon/30 flex items-center justify-center text-lime-neon mb-5 shadow-[0_0_20px_rgba(183,255,3,0.15)]">
-                            <i data-lucide="layers" class="w-6 h-6"></i>
+                            <i data-lucide="sliders" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2.5">Кроссплатформенность</h3>
+                        <h3 class="text-xl font-bold text-white mb-2.5">Гибкие режимы: TUN и SOCKS + HTTP</h3>
                         <p class="text-neutral-300 text-sm leading-relaxed">
-                            Единый пользовательский опыт на смартфонах Android и настольных ПК под управлением Windows. Импорт подписок по ссылке, из буфера обмена или QR-коду за секунду.
+                            Переключайтесь в одно нажатие между системным VPN-туннелем (<span class="text-white font-mono">tun</span>) для всего трафика устройства и локальным прокси-сервером (<span class="text-white font-mono">socks + http</span>) для отдельных программ.
                         </p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-white/5 flex items-center gap-4 text-xs font-mono text-neutral-400">
-                        <span class="flex items-center gap-1.5 text-neutral-200"><i data-lucide="smartphone" class="w-3.5 h-3.5 text-lime-neon"></i> Android 8.0+</span>
-                        <span class="flex items-center gap-1.5 text-neutral-200"><i data-lucide="monitor" class="w-3.5 h-3.5 text-lime-neon"></i> Windows 10/11</span>
+                        <span class="text-lime-neon">TUN Mode</span>
+                        <span>•</span>
+                        <span class="text-neutral-200">SOCKS5 + HTTP Proxy</span>
                     </div>
                 </div>
 
-                <!-- Карточка 4: Минимальный пинг и умный роутинг -->
+                <!-- Карточка 4 -->
                 <div class="liquid-glass-card rounded-3xl p-7 flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-lime-neon/10 border border-lime-neon/30 flex items-center justify-center text-lime-neon mb-5 shadow-[0_0_20px_rgba(183,255,3,0.15)]">
                             <i data-lucide="route" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2.5">Минимальный пинг и умный роутинг</h3>
+                        <h3 class="text-xl font-bold text-white mb-2.5">Подписки и умный роутинг</h3>
                         <p class="text-neutral-300 text-sm leading-relaxed">
-                            Гибкое раздельное туннелирование (Split Tunneling) по приложениям и доменам. Локальные сервисы работают напрямую без задержек, а нужный трафик идет через туннель.
+                            Удобное управление подписками, импорт конфигураций из буфера обмена и автоматическая проверка задержки серверов через встроенный URL-тест.
                         </p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-lime-neon/80">
-                        <span>GeoIP / GeoSite правила</span>
+                        <span>VLESS URI / Подписки</span>
                         <span>•</span>
-                        <span>Авто-выбор лучшего узла</span>
+                        <span>GeoIP / GeoSite</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Секция загрузки (Download Cards для Android и Windows + Release Notes v0.1.0) -->
+        <!-- 4. Секция загрузки (Динамические ссылки из downloadlinks.txt) -->
         <section id="download" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
             <div class="text-center max-w-2xl mx-auto mb-14">
-                <span class="text-xs font-mono uppercase tracking-widest text-lime-neon">Релиз v0.1.0</span>
+                <span class="text-xs font-mono uppercase tracking-widest text-lime-neon">Релизы GitHub</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
                     Скачать LimeNet
                 </h2>
                 <p class="text-neutral-400 text-sm sm:text-base mt-3">
-                    Выберите вашу операционную систему. Все сборки подписаны и проверены на отсутствие телеметрии.
+                    Актуальные ссылки автоматически загружаются из <a href="https://raw.githubusercontent.com/LimeHi/LimeNet/refs/heads/main/downloadlinks.txt" target="_blank" rel="noopener noreferrer" class="text-lime-neon underline decoration-lime-neon/40 hover:decoration-lime-neon font-mono text-xs">downloadlinks.txt</a> в репозитории проекта.
                 </p>
             </div>
 
             <!-- Две карточки платформ -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 
-                <!-- Карточка Android -->
+                <!-- Карточка Android (Строка 1 из downloadlinks.txt) -->
                 <div class="liquid-glass-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-40 h-40 bg-lime-neon/5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -474,17 +566,17 @@
                                 </div>
                                 <div>
                                     <h3 class="text-2xl font-bold text-white">Android</h3>
-                                    <span class="text-xs font-mono text-lime-neon">APK • arm64-v8a / Universal</span>
+                                    <span id="android-card-filename" class="text-xs font-mono text-lime-neon">limenet-prerelease.apk</span>
                                 </div>
                             </div>
-                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-neutral-300">
-                                28.4 МБ
+                            <span class="px-3 py-1 rounded-full bg-lime-neon/10 border border-lime-neon/30 text-xs font-mono text-lime-neon">
+                                Доступно
                             </span>
                         </div>
 
                         <!-- Системные требования -->
                         <div class="bg-black/40 rounded-2xl p-4 border border-white/5 space-y-2.5 mb-6">
-                            <div class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Системные требования</div>
+                            <div class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Характеристики сборки</div>
                             <ul class="space-y-2 text-sm text-neutral-300">
                                 <li class="flex items-center gap-2.5">
                                     <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
@@ -492,31 +584,31 @@
                                 </li>
                                 <li class="flex items-center gap-2.5">
                                     <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
-                                    <span>Архитектура: <strong>arm64-v8a</strong> (современные смартфоны)</span>
+                                    <span>Ядро: <strong>Xray-core</strong> (VLESS Reality, Vision, gRPC, WS)</span>
                                 </li>
                                 <li class="flex items-center gap-2.5">
                                     <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
-                                    <span>Режимы: VPNService (TUN) и локальный SOCKS5/HTTP прокси</span>
+                                    <span>Режимы: системный <strong>TUN</strong> и локальный <strong>SOCKS + HTTP</strong></span>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="space-y-3">
-                        <button onclick="startDownload('LimeNet-0.1.0-android.apk', '28.4 МБ', 'Android arm64-v8a')" class="w-full lime-glow-btn py-3.5 px-6 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2.5">
+                        <a id="android-card-btn" href="https://github.com/LimeHi/LimeNet/releases/download/limenet/limenet-prerelease.apk" onclick="handleDirectDownload(event, 'android')" class="w-full lime-glow-btn py-3.5 px-6 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 cursor-pointer">
                             <i data-lucide="download" class="w-5 h-5"></i>
-                            <span>Скачать LimeNet-0.1.0-android.apk</span>
-                        </button>
-                        <div class="flex items-center justify-between text-xs font-mono text-neutral-500 px-1">
-                            <span>SHA-256: 8f94e2c1...d2e4c6a</span>
-                            <button onclick="copyDirectHash('8f94e2c1a7b04d39e61c58f20a4b7d9e3c18f02b6a4d91e7c3b5a8f01d2e4c6a')" class="text-neutral-400 hover:text-lime-neon transition-colors">
-                                Копировать хеш
+                            <span id="android-card-btn-text">Скачать limenet-prerelease.apk</span>
+                        </a>
+                        <div class="flex items-center justify-between gap-2 text-xs font-mono text-neutral-500 px-1">
+                            <span id="android-card-url-preview" class="truncate max-w-[260px]">github.com/LimeHi/LimeNet/releases/...</span>
+                            <button onclick="copyPlatformUrl('android')" class="text-neutral-400 hover:text-lime-neon transition-colors shrink-0">
+                                Копировать ссылку
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Карточка Windows -->
+                <!-- Карточка Windows / ПК (Строка 2 из downloadlinks.txt) -->
                 <div class="liquid-glass-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-400/5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -527,18 +619,18 @@
                                     <i data-lucide="monitor" class="w-7 h-7"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-2xl font-bold text-white">Windows</h3>
-                                    <span class="text-xs font-mono text-lime-neon">Installer & Portable • x64</span>
+                                    <h3 class="text-2xl font-bold text-white">ПК (Windows)</h3>
+                                    <span id="windows-card-filename" class="text-xs font-mono text-lime-neon">Windows x64 Build</span>
                                 </div>
                             </div>
-                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-neutral-300">
-                                46.8 МБ
+                            <span id="windows-status-badge" class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-neutral-300">
+                                Проверка...
                             </span>
                         </div>
 
                         <!-- Системные требования -->
                         <div class="bg-black/40 rounded-2xl p-4 border border-white/5 space-y-2.5 mb-6">
-                            <div class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Системные требования</div>
+                            <div class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Характеристики сборки</div>
                             <ul class="space-y-2 text-sm text-neutral-300">
                                 <li class="flex items-center gap-2.5">
                                     <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
@@ -546,73 +638,70 @@
                                 </li>
                                 <li class="flex items-center gap-2.5">
                                     <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
-                                    <span>Драйвер: встроенный <strong>Wintun</strong> для системного TUN-режима</span>
+                                    <span>Ядро: <strong>Xray-core</strong> с поддержкой системного TUN и прокси</span>
                                 </li>
                                 <li class="flex items-center gap-2.5">
                                     <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
-                                    <span>Доступна портативная версия без установки в систему</span>
+                                    <span>Прямая загрузка подхватывается из 2-й строки <code class="text-xs text-lime-neon">downloadlinks.txt</code></span>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="space-y-3">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                            <button onclick="startDownload('LimeNet-0.1.0-win-x64.exe', '46.8 МБ', 'Windows Installer x64')" class="sm:col-span-2 lime-glow-btn py-3.5 px-5 rounded-2xl font-bold text-sm flex items-center justify-center gap-2">
-                                <i data-lucide="download" class="w-4 h-4"></i>
-                                <span>Installer (.exe)</span>
-                            </button>
-                            <button onclick="startDownload('LimeNet-0.1.0-win-x64-portable.zip', '44.1 МБ', 'Windows Portable x64')" class="py-3.5 px-4 rounded-2xl font-semibold text-sm bg-white/5 hover:bg-white/10 border border-white/15 hover:border-lime-neon/50 text-white transition-all flex items-center justify-center gap-2">
-                                <i data-lucide="archive" class="w-4 h-4 text-lime-neon"></i>
-                                <span>Portable</span>
-                            </button>
-                        </div>
-                        <div class="flex items-center justify-between text-xs font-mono text-neutral-500 px-1">
-                            <span>SHA-256: 3c71b9a4...9f02e81</span>
-                            <button onclick="copyDirectHash('3c71b9a4e5082d1f7b64a9c3e12d8f05b4a7c6e9d1f3a2b8c5e7d0a49f02e81')" class="text-neutral-400 hover:text-lime-neon transition-colors">
-                                Копировать хеш
+                        <a id="windows-card-btn" href="https://github.com/LimeHi/LimeNet/releases" onclick="handleDirectDownload(event, 'windows')" class="w-full lime-glow-btn py-3.5 px-6 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 cursor-pointer">
+                            <i data-lucide="download" class="w-5 h-5"></i>
+                            <span id="windows-card-btn-text">Скачать для Windows</span>
+                        </a>
+                        <div class="flex items-center justify-between gap-2 text-xs font-mono text-neutral-500 px-1">
+                            <span id="windows-card-url-preview" class="truncate max-w-[260px]">github.com/LimeHi/LimeNet/releases</span>
+                            <button onclick="copyPlatformUrl('windows')" class="text-neutral-400 hover:text-lime-neon transition-colors shrink-0">
+                                Копировать ссылку
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Блок Changelog для v0.1.0 -->
+            <!-- Блок информации о релизе и сообществе -->
             <div class="mt-10 liquid-glass rounded-3xl p-6 sm:p-8">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-white/10">
                     <div class="flex items-center gap-3">
-                        <span class="px-3 py-1 rounded-lg bg-lime-neon text-obsidian font-mono font-bold text-xs">v0.1.0</span>
-                        <h4 class="text-lg font-bold text-white">Changelog (Первый публичный релиз на базе Xray-core)</h4>
+                        <span class="px-3 py-1 rounded-lg bg-lime-neon text-obsidian font-mono font-bold text-xs">Pre-Release</span>
+                        <h4 class="text-lg font-bold text-white">Актуальный статус разработки LimeNet</h4>
                     </div>
-                    <span class="text-xs font-mono text-neutral-400">Опубликовано: Ноябрь 2026</span>
+                    <a href="https://github.com/LimeHi/LimeNet/releases" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-lime-neon hover:underline flex items-center gap-1">
+                        <span>Все релизы на GitHub</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-5 text-sm text-neutral-300">
                     <div class="space-y-2">
                         <div class="font-semibold text-lime-neon flex items-center gap-2">
                             <i data-lucide="sparkles" class="w-4 h-4"></i>
-                            <span>Дизайн Liquid Glass</span>
+                            <span>Интерфейс Liquid Glass</span>
                         </div>
                         <p class="text-neutral-400 text-xs leading-relaxed">
-                            Первый публичный релиз фирменного полупрозрачного интерфейса с радиальным 12-секторным индикатором соединения, живой телеметрией скорости и мгновенным переключением узлов.
+                            Реализован главный экран подключения с орбитальным индикатором серверов, вкладками подписок и настроек, а также быстрым URL-тестом задержки.
                         </p>
                     </div>
                     <div class="space-y-2">
                         <div class="font-semibold text-lime-neon flex items-center gap-2">
                             <i data-lucide="cpu" class="w-4 h-4"></i>
-                            <span>Движок Xray-core v24+</span>
+                            <span>Движок Xray-core</span>
                         </div>
                         <p class="text-neutral-400 text-xs leading-relaxed">
-                            Полная поддержка протокола VLESS (XTLS-RPRX-Vision), маскировки Reality, транспортов gRPC / WebSocket и импорта URI / Base64 / JSON подписок в один клик.
+                            Полная поддержка протокола VLESS (XTLS-Reality / Vision), режимов системного TUN-туннеля и локального SOCKS + HTTP прокси.
                         </p>
                     </div>
                     <div class="space-y-2">
                         <div class="font-semibold text-lime-neon flex items-center gap-2">
-                            <i data-lucide="shield" class="w-4 h-4"></i>
-                            <span>Стабилизация TUN-дескриптора</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Канал новостей LimeProd</span>
                         </div>
                         <p class="text-neutral-400 text-xs leading-relaxed">
-                            Стабилизирована работа системного TUN-дескриптора на Android и Windows (Wintun), исключены утечки DNS (FakeIP / DoH) и добавлен раздельный туннелинг по приложениям и GeoSite-доменам.
+                            Следите за выходом новых сборок для Android и ПК, чейнджлогами и анонсами в официальном Telegram-канале <a href="https://t.me/LimeProdNews" target="_blank" rel="noopener noreferrer" class="text-lime-neon hover:underline">@LimeProdNews</a>.
                         </p>
                     </div>
                 </div>
@@ -620,114 +709,179 @@
         </section>
     </main>
 
-    <!-- 5. Минималистичный футер -->
-    <footer class="relative z-10 border-t border-white/10 bg-black/40 backdrop-blur-xl">
+    <!-- 5. Минималистичный футер с LimeProd, Telegram (@LimeProdNews) и GitHub -->
+    <footer class="relative z-10 border-t border-white/10 bg-black/50 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-lime-neon/10 border border-lime-neon/30">
+            <div class="flex items-center gap-3.5 text-center sm:text-left">
+                <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-lime-neon/10 border border-lime-neon/30 shrink-0">
                     <svg class="w-4 h-4 text-lime-neon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16 2L28.1244 9V23L16 30L3.87564 23V9L16 2Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
                         <circle cx="16" cy="16" r="3.5" fill="currentColor"/>
                     </svg>
                 </div>
                 <div>
-                    <span class="font-bold text-white">Lime<span class="text-lime-neon">Net</span></span>
-                    <span class="text-xs text-neutral-500 block sm:inline sm:ml-3">© 2026 LimeNet Project. Быстрый и прозрачный VPN.</span>
+                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                        <span class="font-bold text-white">Lime<span class="text-lime-neon">Net</span></span>
+                        <span class="text-xs font-mono px-2 py-0.5 rounded bg-lime-neon/10 border border-lime-neon/25 text-lime-neon">by LimeProd</span>
+                    </div>
+                    <span class="text-xs text-neutral-400 block mt-1">
+                        © 2026 <strong class="text-neutral-200">LimeProd</strong> · LimeNet Project. Быстрый и прозрачный VPN.
+                    </span>
                 </div>
             </div>
 
-            <!-- Ссылки на GitHub и Telegram -->
-            <div class="flex items-center gap-3">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-lime-neon/15 border border-white/10 hover:border-lime-neon/40 text-sm text-neutral-300 hover:text-lime-neon transition-all">
-                    <i data-lucide="github" class="w-4 h-4"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-lime-neon/15 border border-white/10 hover:border-lime-neon/40 text-sm text-neutral-300 hover:text-lime-neon transition-all">
-                    <i data-lucide="send" class="w-4 h-4"></i>
+            <!-- Ссылки на Telegram и GitHub -->
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <a href="https://t.me/LimeProdNews" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-lime-neon/15 border border-white/10 hover:border-lime-neon/40 text-sm text-neutral-200 hover:text-lime-neon transition-all">
+                    <svg class="w-4 h-4 text-lime-neon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
                     <span>Telegram</span>
+                </a>
+                <a href="https://github.com/LimeHi/LimeNet" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-lime-neon/15 border border-white/10 hover:border-lime-neon/40 text-sm text-neutral-200 hover:text-lime-neon transition-all">
+                    <i data-lucide="github" class="w-4 h-4 text-lime-neon"></i>
+                    <span>GitHub</span>
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- Модальное окно / Уведомление о начале загрузки -->
-    <div id="download-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-md">
-        <div class="liquid-glass rounded-3xl max-w-md w-full p-6 sm:p-7 border border-lime-neon/40 shadow-[0_0_50px_rgba(183,255,3,0.2)] relative animate-[fadeIn_0.2s_ease-out]">
-            <button onclick="closeDownloadModal()" aria-label="Закрыть" class="absolute top-5 right-5 p-2 rounded-xl bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-colors">
-                <i data-lucide="x" class="w-4 h-4"></i>
-            </button>
-
-            <div class="flex items-center gap-3.5 mb-4">
-                <div class="w-12 h-12 rounded-2xl bg-lime-neon/15 border border-lime-neon/40 flex items-center justify-center text-lime-neon">
-                    <i data-lucide="download-cloud" class="w-6 h-6 animate-bounce"></i>
-                </div>
-                <div>
-                    <span class="text-xs font-mono text-lime-neon uppercase tracking-wider">Загрузка началась</span>
-                    <h4 id="modal-file-title" class="text-base font-bold text-white font-mono break-all">LimeNet-0.1.0-android.apk</h4>
-                </div>
-            </div>
-
-            <p id="modal-file-desc" class="text-sm text-neutral-300 mb-4">
-                Пакет сборки <span class="text-white font-medium">Android arm64-v8a</span> (28.4 МБ) подготовлен к передаче.
-            </p>
-
-            <!-- Прогресс-бар имитации скачивания -->
-            <div class="space-y-1.5 mb-5">
-                <div class="flex justify-between text-xs font-mono text-neutral-400">
-                    <span id="modal-progress-label">Соединение с CDN...</span>
-                    <span id="modal-progress-percent" class="text-lime-neon">0%</span>
-                </div>
-                <div class="w-full h-2 rounded-full bg-black/60 overflow-hidden border border-white/10">
-                    <div id="modal-progress-bar" class="h-full bg-gradient-to-r from-lime-neon to-emerald-400 rounded-full transition-all duration-300" style="width: 0%"></div>
-                </div>
-            </div>
-
-            <div class="flex items-center justify-between gap-3 pt-2 border-t border-white/10">
-                <span class="text-xs text-neutral-400">Ядро сборки: <strong class="text-neutral-200">Xray-core v24+</strong></span>
-                <button onclick="closeDownloadModal()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-semibold text-white transition-colors">
-                    Готово
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Всплывающий Toast (для копирования SHA-256 и уведомлений) -->
-    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2.5 px-4 py-3 rounded-2xl liquid-glass border border-lime-neon/40 text-sm text-white shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
+    <!-- Всплывающий Toast -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2.5 px-4 py-3 rounded-2xl liquid-glass border border-lime-neon/40 text-sm text-white shadow-[0_10px_30px_rgba(0,0,0,0.85)]">
         <i data-lucide="check-circle" class="w-4 h-4 text-lime-neon shrink-0"></i>
-        <span id="toast-message">Скопировано в буфер обмена</span>
+        <span id="toast-message">Готово</span>
     </div>
 
     <script>
         // Инициализация иконок Lucide
         lucide.createIcons();
 
-        // ==========================================
-        // 1. Логика Hero-селектора платформ
-        // ==========================================
-        const platformData = {
+        // =========================================================================
+        // 1. Динамическая загрузка ссылок из GitHub Raw (downloadlinks.txt)
+        //    Строка 1 -> Android | Строка 2 -> ПК (Windows)
+        // =========================================================================
+        const DOWNLOAD_LINKS_SOURCE = 'https://raw.githubusercontent.com/LimeHi/LimeNet/refs/heads/main/downloadlinks.txt';
+
+        const downloadConfig = {
             android: {
-                filename: 'LimeNet-0.1.0-android.apk',
-                meta: 'Версия 0.1.0 • 28.4 МБ • Android 8.0+ (arm64-v8a)',
+                url: 'https://github.com/LimeHi/LimeNet/releases/download/limenet/limenet-prerelease.apk',
+                filename: 'limenet-prerelease.apk',
+                meta: 'Android 8.0+ • Xray-core • Актуальная сборка из GitHub Releases',
                 btnText: 'Скачать APK',
-                size: '28.4 МБ',
-                arch: 'Android arm64-v8a',
-                sha: '8f94e2c1a7b04d39e61c58f20a4b7d9e3c18f02b6a4d91e7c3b5a8f01d2e4c6a'
+                hasDirectLink: true
             },
             windows: {
-                filename: 'LimeNet-0.1.0-win-x64.exe',
-                meta: 'Версия 0.1.0 • 46.8 МБ • Windows 10/11 (x64 Installer)',
-                btnText: 'Скачать EXE',
-                size: '46.8 МБ',
-                arch: 'Windows Installer x64',
-                sha: '3c71b9a4e5082d1f7b64a9c3e12d8f05b4a7c6e9d1f3a2b8c5e7d0a49f02e81'
+                url: 'https://github.com/LimeHi/LimeNet/releases',
+                filename: 'Windows x64 Build',
+                meta: 'Windows 10/11 (x64) • Xray-core • Страница релизов GitHub',
+                btnText: 'Открыть релизы ПК',
+                hasDirectLink: false
             }
         };
 
         let currentHeroPlatform = 'android';
 
+        // Извлечение чистого имени файла из URL
+        function extractFilenameFromUrl(url, fallback) {
+            try {
+                const cleanUrl = url.split('?')[0].split('#')[0];
+                const parts = cleanUrl.split('/');
+                const last = parts[parts.length - 1];
+                if (last && last.includes('.')) {
+                    return decodeURIComponent(last);
+                }
+                return fallback;
+            } catch (e) {
+                return fallback;
+            }
+        }
+
+        // Форматирование короткого превью ссылки
+        function formatShortUrl(url) {
+            return url.replace(/^https?:\/\//, '');
+        }
+
+        async function fetchDynamicDownloadLinks() {
+            const syncDot = document.getElementById('links-sync-dot');
+            const syncStatus = document.getElementById('links-sync-status');
+
+            try {
+                // Добавляем timestamp, чтобы браузер не кешировал старый downloadlinks.txt
+                const response = await fetch(`${DOWNLOAD_LINKS_SOURCE}?t=${Date.now()}`, {
+                    cache: 'no-store'
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const rawText = await response.text();
+                const lines = rawText
+                    .split(/\r?\n/)
+                    .map(line => line.trim())
+                    .filter(line => line.length > 0 && !line.startsWith('#'));
+
+                // Строка 1: Android
+                if (lines[0] && /^https?:\/\//i.test(lines[0])) {
+                    downloadConfig.android.url = lines[0];
+                    downloadConfig.android.filename = extractFilenameFromUrl(lines[0], 'limenet-prerelease.apk');
+                    downloadConfig.android.hasDirectLink = true;
+                }
+
+                // Строка 2: ПК (Windows)
+                if (lines[1] && /^https?:\/\//i.test(lines[1])) {
+                    downloadConfig.windows.url = lines[1];
+                    downloadConfig.windows.filename = extractFilenameFromUrl(lines[1], 'LimeNet-Windows-x64.exe');
+                    downloadConfig.windows.meta = 'Windows 10/11 (x64) • Xray-core • Прямая загрузка с GitHub';
+                    downloadConfig.windows.btnText = 'Скачать для ПК';
+                    downloadConfig.windows.hasDirectLink = true;
+                } else {
+                    downloadConfig.windows.hasDirectLink = false;
+                }
+
+                syncDot.className = 'w-2 h-2 rounded-full bg-lime-neon';
+                syncStatus.textContent = 'Ссылки актуальны (downloadlinks.txt)';
+            } catch (err) {
+                // При ошибке сети оставляем рабочую ссылку по умолчанию
+                syncDot.className = 'w-2 h-2 rounded-full bg-lime-neon/70';
+                syncStatus.textContent = 'Актуальный релиз GitHub';
+            }
+
+            applyDownloadLinksToUI();
+        }
+
+        function applyDownloadLinksToUI() {
+            // Обновляем карточку Android
+            const androidCfg = downloadConfig.android;
+            document.getElementById('android-card-filename').textContent = androidCfg.filename;
+            document.getElementById('android-card-btn').href = androidCfg.url;
+            document.getElementById('android-card-btn-text').textContent = `Скачать ${androidCfg.filename}`;
+            document.getElementById('android-card-url-preview').textContent = formatShortUrl(androidCfg.url);
+
+            // Обновляем карточку Windows
+            const winCfg = downloadConfig.windows;
+            const winBadge = document.getElementById('windows-status-badge');
+            document.getElementById('windows-card-filename').textContent = winCfg.filename;
+            document.getElementById('windows-card-btn').href = winCfg.url;
+            document.getElementById('windows-card-url-preview').textContent = formatShortUrl(winCfg.url);
+
+            if (winCfg.hasDirectLink) {
+                document.getElementById('windows-card-btn-text').textContent = `Скачать ${winCfg.filename}`;
+                winBadge.textContent = 'Доступно';
+                winBadge.className = 'px-3 py-1 rounded-full bg-lime-neon/10 border border-lime-neon/30 text-xs font-mono text-lime-neon';
+            } else {
+                document.getElementById('windows-card-btn-text').textContent = 'Перейти к релизам GitHub';
+                winBadge.textContent = 'Скоро / Releases';
+                winBadge.className = 'px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-neutral-300';
+            }
+
+            // Обновляем Hero-блок для текущей выбранной вкладки
+            selectHeroPlatform(currentHeroPlatform);
+        }
+
         function selectHeroPlatform(platform) {
             currentHeroPlatform = platform;
-            const data = platformData[platform];
+            const cfg = downloadConfig[platform];
 
             const tabAndroid = document.getElementById('tab-android');
             const tabWindows = document.getElementById('tab-windows');
@@ -740,34 +894,45 @@
                 tabAndroid.className = 'flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-sm font-semibold text-neutral-300 hover:text-white transition-all';
             }
 
-            document.getElementById('hero-filename').textContent = data.filename;
-            document.getElementById('hero-meta').textContent = data.meta;
-            document.getElementById('hero-btn-text').textContent = data.btnText;
-            document.getElementById('hero-sha-value').textContent = data.sha;
+            document.getElementById('hero-filename').textContent = cfg.filename;
+            document.getElementById('hero-meta').textContent = cfg.meta;
+            document.getElementById('hero-btn-text').textContent = cfg.btnText;
+            document.getElementById('hero-download-btn').href = cfg.url;
         }
 
-        function toggleHeroSha() {
-            const box = document.getElementById('hero-sha-box');
-            const chevron = document.getElementById('hero-sha-chevron');
-            box.classList.toggle('hidden');
-            chevron.classList.toggle('rotate-180');
+        function handleDirectDownload(event, platform) {
+            const cfg = downloadConfig[platform];
+            if (!cfg || !cfg.url) return;
+
+            // Показываем уведомление о начале загрузки и даем браузеру перейти по прямой ссылке
+            showToast(`Загрузка: ${cfg.filename}`);
         }
 
-        function triggerHeroDownload() {
-            const data = platformData[currentHeroPlatform];
-            startDownload(data.filename, data.size, data.arch);
+        function copyCurrentDownloadUrl() {
+            const url = downloadConfig[currentHeroPlatform].url;
+            copyToClipboard(url, 'Прямая ссылка скопирована');
         }
 
-        // ==========================================
-        // 2. Интерактивный Liquid Glass UI Preview Widget
-        // ==========================================
-        let isConnected = true;
-        let activeSectorCount = 12;
-        let sessionSeconds = 868; // 00:14:28
-        let dialAnimationInterval = null;
-        let liveMetricsInterval = null;
+        function copyPlatformUrl(platform) {
+            const url = downloadConfig[platform].url;
+            copyToClipboard(url, 'Ссылка на скачивание скопирована');
+        }
 
-        // Генерация 12-секторного радиального циферблата SVG
+        // =========================================================================
+        // 2. Интерактивный превью-виджет реального интерфейса LimeNet
+        // =========================================================================
+        const serverNodes = [
+            { name: 'Латвия', flag: '🇱🇻', idlePing: 186, activePing: 42, sectors: 4 },
+            { name: 'Чехия', flag: '🇨🇿', idlePing: 164, activePing: 38, sectors: 6 },
+            { name: 'Франция', flag: '🇫🇷', idlePing: 192, activePing: 49, sectors: 8 },
+            { name: 'Нидерланды', flag: '🇳🇱', idlePing: 158, activePing: 34, sectors: 10 }
+        ];
+
+        let currentServerIdx = 0;
+        let isVpnConnected = false;
+        let currentProxyMode = 'tun';
+        let dialAnimTimer = null;
+
         function buildRadialDial() {
             const svg = document.getElementById('radial-dial-svg');
             svg.innerHTML = '';
@@ -775,8 +940,8 @@
             const cx = 100;
             const cy = 100;
             const outerR = 92;
-            const innerR = 72;
-            const gapAngle = 5; // зазор между секторами в градусах
+            const innerR = 66;
+            const gapAngle = 4;
             const sectorAngle = (360 / totalSectors) - gapAngle;
 
             for (let i = 0; i < totalSectors; i++) {
@@ -808,201 +973,151 @@
                 path.setAttribute('d', pathData);
                 path.setAttribute('id', `dial-sector-${i}`);
                 path.setAttribute('class', 'dial-sector');
-                path.setAttribute('fill', '#b7ff03');
                 svg.appendChild(path);
             }
         }
 
-        function updateDialVisuals(litCount) {
+        // Отрисовка секторов: яркий #b7ff03 для активных и приглушенный зеленый шлейф как на скриншоте
+        function renderDialState(brightCount, trailCount) {
             for (let i = 0; i < 12; i++) {
                 const sector = document.getElementById(`dial-sector-${i}`);
                 if (!sector) continue;
-                if (i < litCount) {
+
+                if (i < brightCount) {
                     sector.setAttribute('fill', '#b7ff03');
-                    sector.style.filter = 'drop-shadow(0 0 5px rgba(183, 255, 3, 0.65))';
+                    sector.style.filter = 'drop-shadow(0 0 6px rgba(183, 255, 3, 0.55))';
+                    sector.style.opacity = '1';
+                } else if (i < trailCount) {
+                    sector.setAttribute('fill', 'rgba(130, 185, 35, 0.32)');
+                    sector.style.filter = 'none';
                     sector.style.opacity = '1';
                 } else {
-                    sector.setAttribute('fill', 'rgba(255, 255, 255, 0.1)');
+                    sector.setAttribute('fill', 'rgba(255, 255, 255, 0.03)');
+                    sector.setAttribute('stroke', 'rgba(183, 255, 3, 0.12)');
+                    sector.setAttribute('stroke-width', '1');
                     sector.style.filter = 'none';
-                    sector.style.opacity = '0.55';
+                    sector.style.opacity = '1';
                 }
             }
+        }
+
+        function selectServerNode(idx) {
+            currentServerIdx = idx;
+            const node = serverNodes[idx];
+
+            document.getElementById('selected-server-flag').textContent = node.flag;
+            document.getElementById('selected-server-name').textContent = node.name;
+
+            // Подсветка выбранного узла на орбите
+            serverNodes.forEach((_, i) => {
+                const btn = document.getElementById(`orbit-node-${i}`);
+                if (!btn) return;
+                const dot = btn.querySelectorAll('span')[1];
+                if (i === idx) {
+                    dot.className = 'w-3.5 h-3.5 rounded-full bg-lime-neon border-2 border-obsidian shadow-[0_0_10px_#b7ff03] transition-transform scale-110';
+                } else {
+                    dot.className = 'w-2.5 h-2.5 rounded-full bg-white/30 border border-obsidian transition-all group-hover:scale-125';
+                }
+            });
+
+            const pingVal = isVpnConnected ? node.activePing : node.idlePing;
+            document.getElementById('power-ping-label').textContent = `${pingVal} мс`;
+
+            if (isVpnConnected) {
+                renderDialState(12, 12);
+            } else {
+                renderDialState(1, node.sectors);
+            }
+        }
+
+        function cycleServerNode() {
+            const nextIdx = (currentServerIdx + 1) % serverNodes.length;
+            selectServerNode(nextIdx);
         }
 
         function toggleVpnConnection() {
-            clearInterval(dialAnimationInterval);
-            isConnected = !isConnected;
+            clearInterval(dialAnimTimer);
+            isVpnConnected = !isVpnConnected;
 
-            const powerBtn = document.getElementById('power-toggle-btn');
-            const powerIcon = document.getElementById('power-icon');
-            const powerLabel = document.getElementById('power-btn-label');
-            const statusText = document.getElementById('connection-status-text');
-            const ipText = document.getElementById('connection-ip-text');
+            const statusLabel = document.getElementById('power-status-label');
+            const pingLabel = document.getElementById('power-ping-label');
+            const headerDot = document.getElementById('header-status-dot');
             const ambientGlow = document.getElementById('widget-ambient-glow');
-            const select = document.getElementById('server-select');
-            const selectedOption = select.options[select.selectedIndex];
+            const powerBtn = document.getElementById('power-toggle-btn');
+            const node = serverNodes[currentServerIdx];
 
-            if (isConnected) {
-                // Анимация заполнения 12 секторов
-                let step = 0;
-                dialAnimationInterval = setInterval(() => {
+            if (isVpnConnected) {
+                let step = 1;
+                dialAnimTimer = setInterval(() => {
                     step++;
-                    updateDialVisuals(step);
-                    if (step >= 12) clearInterval(dialAnimationInterval);
-                }, 35);
+                    renderDialState(step, 12);
+                    if (step >= 12) clearInterval(dialAnimTimer);
+                }, 30);
 
-                powerBtn.className = 'absolute w-28 h-28 rounded-full bg-gradient-to-b from-[#1a211a] to-[#0b0e0b] border border-lime-neon/60 shadow-[0_0_32px_rgba(183,255,3,0.4),inset_0_2px_4px_rgba(255,255,255,0.15)] flex flex-col items-center justify-center gap-1 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer';
-                powerIcon.className = 'w-8 h-8 text-lime-neon drop-shadow-[0_0_10px_rgba(183,255,3,0.8)] transition-colors';
-                powerLabel.className = 'text-[10px] font-mono uppercase tracking-widest text-lime-neon font-semibold';
-                powerLabel.textContent = 'Активен';
-
-                statusText.className = 'text-sm font-semibold text-lime-neon flex items-center justify-center gap-1.5';
-                statusText.innerHTML = '<span class="w-2 h-2 rounded-full bg-lime-neon animate-pulse"></span><span>Защищено • VLESS Reality</span>';
-
-                sessionSeconds = 1;
-                ipText.innerHTML = `IP: ${selectedOption.dataset.ip} • <span id="session-timer">00:00:01</span>`;
-                ambientGlow.classList.replace('opacity-20', 'opacity-90');
-
-                updateServerMetrics(selectedOption);
+                statusLabel.textContent = 'подключено';
+                statusLabel.className = 'text-[11px] font-semibold text-lime-neon leading-none mt-0.5';
+                pingLabel.textContent = `${node.activePing} мс`;
+                headerDot.className = 'w-2 h-2 rounded-full bg-lime-neon shadow-[0_0_8px_#b7ff03] transition-colors';
+                ambientGlow.classList.replace('opacity-75', 'opacity-100');
+                powerBtn.classList.add('border-lime-neon/50');
             } else {
-                // Анимация затухания 12 секторов
-                let step = 12;
-                dialAnimationInterval = setInterval(() => {
-                    step--;
-                    updateDialVisuals(step);
-                    if (step <= 0) clearInterval(dialAnimationInterval);
-                }, 25);
-
-                powerBtn.className = 'absolute w-28 h-28 rounded-full bg-gradient-to-b from-[#161816] to-[#090a09] border border-white/15 shadow-[0_8px_20px_rgba(0,0,0,0.6),inset_0_1px_2px_rgba(255,255,255,0.08)] flex flex-col items-center justify-center gap-1 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer';
-                powerIcon.className = 'w-8 h-8 text-neutral-400 transition-colors';
-                powerLabel.className = 'text-[10px] font-mono uppercase tracking-widest text-neutral-400 font-semibold';
-                powerLabel.textContent = 'Выкл';
-
-                statusText.className = 'text-sm font-semibold text-neutral-400 flex items-center justify-center gap-1.5';
-                statusText.innerHTML = '<span class="w-2 h-2 rounded-full bg-neutral-500"></span><span>Отключено • Прямой доступ</span>';
-
-                ipText.textContent = 'Туннель остановлен';
-                ambientGlow.classList.replace('opacity-90', 'opacity-20');
-
-                document.getElementById('stat-ping').textContent = '— ms';
-                document.getElementById('stat-ping').className = 'font-mono text-sm font-bold text-neutral-400 mt-0.5';
-                document.getElementById('stat-down').innerHTML = '0 <span class="text-[10px] font-normal text-neutral-500">Мбит</span>';
-                document.getElementById('stat-up').innerHTML = '0 <span class="text-[10px] font-normal text-neutral-500">Мбит</span>';
+                renderDialState(1, node.sectors);
+                statusLabel.textContent = 'отключено';
+                statusLabel.className = 'text-[11px] font-medium text-neutral-400 leading-none mt-0.5';
+                pingLabel.textContent = `${node.idlePing} мс`;
+                headerDot.className = 'w-2 h-2 rounded-full bg-neutral-400 transition-colors';
+                ambientGlow.classList.replace('opacity-100', 'opacity-75');
+                powerBtn.classList.remove('border-lime-neon/50');
             }
         }
 
-        function changeWidgetServer() {
-            const select = document.getElementById('server-select');
-            const selectedOption = select.options[select.selectedIndex];
+        function setProxyMode(mode) {
+            currentProxyMode = mode;
+            const tunBtn = document.getElementById('mode-tun-btn');
+            const socksBtn = document.getElementById('mode-socks-btn');
 
-            if (isConnected) {
-                // Короткая пульсация секторов при смене сервера
-                updateDialVisuals(4);
-                setTimeout(() => updateDialVisuals(8), 100);
-                setTimeout(() => updateDialVisuals(12), 200);
-
-                const timerEl = document.getElementById('session-timer');
-                const currentTimer = timerEl ? timerEl.textContent : '00:00:01';
-                document.getElementById('connection-ip-text').innerHTML = `IP: ${selectedOption.dataset.ip} • <span id="session-timer">${currentTimer}</span>`;
-                updateServerMetrics(selectedOption);
+            if (mode === 'tun') {
+                tunBtn.className = 'px-5 py-2.5 rounded-2xl text-xs font-bold bg-lime-neon text-obsidian shadow-[0_0_18px_rgba(183,255,3,0.35)] transition-all cursor-pointer';
+                socksBtn.className = 'px-5 py-2.5 rounded-2xl text-xs font-medium bg-white/[0.06] hover:bg-white/[0.1] border border-white/12 text-neutral-200 transition-all cursor-pointer';
+            } else {
+                socksBtn.className = 'px-5 py-2.5 rounded-2xl text-xs font-bold bg-lime-neon text-obsidian shadow-[0_0_18px_rgba(183,255,3,0.35)] transition-all cursor-pointer';
+                tunBtn.className = 'px-5 py-2.5 rounded-2xl text-xs font-medium bg-white/[0.06] hover:bg-white/[0.1] border border-white/12 text-neutral-200 transition-all cursor-pointer';
             }
         }
 
-        function updateServerMetrics(option) {
-            const pingEl = document.getElementById('stat-ping');
-            pingEl.textContent = `${option.dataset.ping} ms`;
-            pingEl.className = 'font-mono text-sm font-bold text-lime-neon mt-0.5';
+        function runUrlTest() {
+            const btn = document.getElementById('url-test-btn');
+            const pingLabel = document.getElementById('power-ping-label');
+            const node = serverNodes[currentServerIdx];
 
-            const downVal = Math.round(parseFloat(option.dataset.down));
-            const upVal = Math.round(parseFloat(option.dataset.up));
-            document.getElementById('stat-down').innerHTML = `${downVal} <span class="text-[10px] font-normal text-neutral-400">Мбит</span>`;
-            document.getElementById('stat-up').innerHTML = `${upVal} <span class="text-[10px] font-normal text-neutral-400">Мбит</span>`;
+            btn.innerHTML = '<span class="w-2 h-2 rounded-full bg-lime-neon animate-ping"></span><span>Тест...</span>';
+
+            setTimeout(() => {
+                const base = isVpnConnected ? node.activePing : node.idlePing;
+                const measured = base + Math.floor(Math.random() * 9) - 4;
+                pingLabel.textContent = `${measured} мс`;
+                btn.innerHTML = `<span>URL-тест: ${measured} мс</span>`;
+            }, 450);
         }
 
-        // Живое обновление таймера сессии и легкая флуктуация скорости
-        function startLiveSimulation() {
-            liveMetricsInterval = setInterval(() => {
-                if (!isConnected) return;
-
-                sessionSeconds++;
-                const hrs = String(Math.floor(sessionSeconds / 3600)).padStart(2, '0');
-                const mins = String(Math.floor((sessionSeconds % 3600) / 60)).padStart(2, '0');
-                const secs = String(sessionSeconds % 60).padStart(2, '0');
-
-                const timerEl = document.getElementById('session-timer');
-                if (timerEl) timerEl.textContent = `${hrs}:${mins}:${secs}`;
-
-                const select = document.getElementById('server-select');
-                const opt = select.options[select.selectedIndex];
-                const basePing = parseInt(opt.dataset.ping, 10);
-                const baseDown = parseFloat(opt.dataset.down);
-                const baseUp = parseFloat(opt.dataset.up);
-
-                const jitterPing = basePing + Math.floor(Math.random() * 3) - 1;
-                const jitterDown = Math.round(baseDown + (Math.random() * 24 - 12));
-                const jitterUp = Math.round(baseUp + (Math.random() * 14 - 7));
-
-                document.getElementById('stat-ping').textContent = `${jitterPing} ms`;
-                document.getElementById('stat-down').innerHTML = `${jitterDown} <span class="text-[10px] font-normal text-neutral-400">Мбит</span>`;
-                document.getElementById('stat-up').innerHTML = `${jitterUp} <span class="text-[10px] font-normal text-neutral-400">Мбит</span>`;
-            }, 1000);
-        }
-
-        // ==========================================
-        // 3. Модальное окно загрузки и буфер обмена
-        // ==========================================
-        let progressInterval = null;
-
-        function startDownload(filename, size, arch) {
-            const modal = document.getElementById('download-modal');
-            const titleEl = document.getElementById('modal-file-title');
-            const descEl = document.getElementById('modal-file-desc');
-            const barEl = document.getElementById('modal-progress-bar');
-            const percentEl = document.getElementById('modal-progress-percent');
-            const labelEl = document.getElementById('modal-progress-label');
-
-            titleEl.textContent = filename;
-            descEl.innerHTML = `Пакет сборки <span class="text-white font-medium">${arch}</span> (${size}) подготовлен к передаче.`;
-
-            barEl.style.width = '0%';
-            percentEl.textContent = '0%';
-            labelEl.textContent = 'Соединение с CDN...';
-
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-
-            clearInterval(progressInterval);
-            let progress = 0;
-            progressInterval = setInterval(() => {
-                progress += Math.floor(Math.random() * 22) + 14;
-                if (progress >= 100) {
-                    progress = 100;
-                    clearInterval(progressInterval);
-                    labelEl.textContent = 'Файл передан браузеру';
-                } else if (progress > 40) {
-                    labelEl.textContent = 'Передача пакета...';
+        function switchAppTab(tabName) {
+            const tabs = ['connect', 'subs', 'settings'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`app-tab-${t}`);
+                const view = document.getElementById(`app-view-${t}`);
+                if (t === tabName) {
+                    btn.className = 'px-2.5 py-1.5 rounded-xl text-[10px] leading-tight font-bold bg-lime-neon text-obsidian transition-all text-left';
+                    view.classList.remove('hidden');
+                } else {
+                    btn.className = 'px-2.5 py-1.5 rounded-xl text-[10px] leading-tight font-medium bg-white/5 border border-white/10 text-neutral-300 hover:text-white transition-all text-left';
+                    view.classList.add('hidden');
                 }
-                barEl.style.width = `${progress}%`;
-                percentEl.textContent = `${progress}%`;
-            }, 220);
+            });
         }
 
-        function closeDownloadModal() {
-            const modal = document.getElementById('download-modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            clearInterval(progressInterval);
-        }
-
-        function copySha(source) {
-            const text = document.getElementById('hero-sha-value').textContent.trim();
-            copyToClipboard(text, 'SHA-256 хеш скопирован');
-        }
-
-        function copyDirectHash(hash) {
-            copyToClipboard(hash, 'SHA-256 хеш скопирован');
-        }
-
+        // =========================================================================
+        // 3. Буфер обмена и всплывающие уведомления
+        // =========================================================================
         function copyToClipboard(text, message) {
             const tempInput = document.createElement('textarea');
             tempInput.value = text;
@@ -1012,7 +1127,7 @@
                 document.execCommand('copy');
                 showToast(message);
             } catch (err) {
-                showToast('Не удалось скопировать хеш');
+                showToast('Не удалось скопировать');
             }
             document.body.removeChild(tempInput);
         }
@@ -1031,19 +1146,10 @@
             }, 3000);
         }
 
-        // Закрытие модального окна по клику на фон или Escape
-        document.getElementById('download-modal').addEventListener('click', function (e) {
-            if (e.target === this) closeDownloadModal();
-        });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeDownloadModal();
-        });
-
-        // Инициализация при загрузке страницы
         window.addEventListener('DOMContentLoaded', () => {
             buildRadialDial();
-            updateDialVisuals(12);
-            startLiveSimulation();
+            renderDialState(1, 4); // Начальное состояние как на скриншоте (Латвия, 186 мс)
+            fetchDynamicDownloadLinks();
         });
     </script>
 </body>
