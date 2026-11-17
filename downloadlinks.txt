@@ -1,1 +1,2 @@
 https://github.com/LimeHi/LimeNet/releases/download/limenet/limenet-prerelease.apk
+https://github.com/LimeHi/LimeNet/releases/download/limenet/limenet-prerelease.exe
