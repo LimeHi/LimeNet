@@ -1,2 +1,2 @@
-https://github.com/LimeHi/LimeNet/releases/download/0.1.4/LimeNet-Android-0.1.4.apk
-https://github.com/LimeHi/LimeNet/releases/download/0.1.4/LimeNet-0.1.4.msi
+https://github.com/LimeHi/LimeNet/releases/download/0.1.5/LimeNet-Android-0.1.5.apk
+https://github.com/LimeHi/LimeNet/releases/download/0.1.5/LimeNet-Windows-0.1.5.msi
