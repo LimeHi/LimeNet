@@ -19,7 +19,7 @@ WL RUS BlackList | https://gitverse.ru/api/repos/bywarm/rser/raw/branch/master/b
 free
 https://t.me/wlrustg
 ---
-WL RUS WhiteList | https://gitverse.ru/api/repos/bywarm/rser/raw/branch/master/black.txt
+WL RUS WhiteList | https://gitverse.ru/api/repos/bywarm/rser/raw/branch/master/wl.txt
 Бесплатная подписка от НеВируса для обхода белых списков (LTE)
 free
 https://t.me/wlrustg
