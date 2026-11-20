@@ -1,7 +1,7 @@
-LimeVPN | https://bit.ly/LimeVPN
+LimeVPN | https://bit.ly/
 Официальные бесплатные серверы LimeNet для обхода блокировок
 free
-https://t.me/LimeProdNews
+https://t.me/Lime
 ---
 VLESS Russia Bypass | https://raw.githubusercontent.com/...
 Автообновляемая база бесплатных серверов из открытых источников
