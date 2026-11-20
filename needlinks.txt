@@ -1,15 +1,36 @@
-LimeVPN | https://bit.ly/
+LimeVPN | https://bit.ly/LimeVPN
 Официальные бесплатные серверы LimeNet для обхода блокировок
 free
-https://t.me/Lime
+https://t.me/LimeProdNews
 ---
-VLESS Russia Bypass | https://raw.githubusercontent.com/...
-Автообновляемая база бесплатных серверов из открытых источников
+EtoNeYa BlackList | https://etoneya.best/other
+Бесплатная подписка от ЭтоНеЯ для обхода черных списков (WiFi)
 free
--
+https://t.me/YoutubeUnBlockRu
 ---
-TurboVPN Bot | https://t.me/твой_бот?start=ref123
-Быстрые локации без лимита скорости и пинга для игр
-paid
-https://t.me/твой_бот?start=ref123
+---
+EtoNeYa WhiteList | https://etoneya.best/whitelist
+Бесплатная подписка от ЭтоНеЯ для обхода белых списков (LTE)
+free
+https://t.me/YoutubeUnBlockRu
+---
+WL RUS BlackList | https://gitverse.ru/api/repos/bywarm/rser/raw/branch/master/black.txt
+Бесплатная подписка от НеВируса для обхода черных списков (WiFi)
+free
+https://t.me/wlrustg
+---
+WL RUS WhiteList | https://gitverse.ru/api/repos/bywarm/rser/raw/branch/master/black.txt
+Бесплатная подписка от НеВируса для обхода белых списков (LTE)
+free
+https://t.me/wlrustg
+---
+KFWL BlackList | https://hub.mos.ru/kfwl/auto/raw/main/fullbl
+Бесплатная подписка от KFWL для обхода черных списков (WiFi)
+free
+https://t.me/kfwlsub
+---
+KFWL WhiteList | https://hub.mos.ru/kfwl/auto/raw/main/wl
+Бесплатная подписка от KFWL для обхода белых списков (LTE)
+free
+https://t.me/kfwlsub
 ---
