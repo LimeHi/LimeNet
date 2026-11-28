@@ -1,0 +1,30 @@
+# Gradle / Kotlin build state
+.gradle/
+.kotlin/
+**/.cxx/
+**/build/
+**/build-delivery/
+**/target/
+out/
+
+# Machine-specific configuration and signing material
+local.properties
+*.jks
+*.keystore
+keys/
+
+# Packaged artifacts and local backup copies
+/builds/
+/*.apk
+/*.aab
+/*.msi
+/*.exe
+/_backup/
+/AGENTS.md
+
+# IDE / operating system files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db

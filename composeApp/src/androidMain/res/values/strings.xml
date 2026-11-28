@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LimeNet</string>
+    <string name="vpn_channel">LimeNet VPN</string>
+    <string name="vpn_title">LimeNet подключён</string>
+    <string name="vpn_connected">Подключено</string>
+    <string name="vpn_connected_server">Подключено · %1$s</string>
+    <string name="vpn_connecting">LimeNet подключается…</string>
+    <string name="vpn_screen_paused">VPN приостановлен до включения экрана</string>
+    <string name="vpn_stop">Отключить</string>
+</resources>
